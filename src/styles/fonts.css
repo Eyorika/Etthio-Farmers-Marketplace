@@ -1,0 +1,14 @@
+/* Amharic Font Fallback */
+@font-face {
+    font-family: 'Noto Sans Ethiopic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/NotoSansEthiopic-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans Ethiopic';
+    font-weight: 700;
+    src: url('/fonts/NotoSansEthiopic-Bold.ttf') format('truetype');
+  }
+  

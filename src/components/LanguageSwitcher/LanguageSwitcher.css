@@ -1,0 +1,4 @@
+/* Custom styles for Ethiopian languages */
+select option[value="am"] {
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+  }

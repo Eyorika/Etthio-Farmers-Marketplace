@@ -1,0 +1,13 @@
+:root {
+    --primary: #4CAF50;       /* Green */
+    --accent: #795548;        /* Brown */
+    --header-nav-footer: #2E7D32; /* Dark Green */
+    --error: #B00020;         /* Red */
+    --cta-btn: #FFC107;       /* Amber */
+    --warning: #F57F17;       /* Orange */
+    --text-color: #ffffff;    /* White */
+    --success: #689F38;       /* Light Green */
+    --background-color: #F5F5DC; /* Beige */
+  }
+@import '@fontsource/noto-sans-ethiopic/400.css';
+@import '@fontsource/noto-sans-ethiopic/700.css';

@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@fontsource/noto-sans-ethiopic/400.css';
+@import '@fontsource/noto-sans-ethiopic/700.css';
+@import '@heroicons/react/outline.css';
+:root {
+  --cta-btn: #FFC107; /* Must match your CTA color */
+  --header-nav-footer: #2E7D32;
+  
+}
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Base Styles */
+body {
+  @apply bg-background text-gray-800;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Amharic Text Support */
+.amharic {
+  font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+/* Hero Section Enhancements */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--header-nav-footer) 0%,
+    var(--primary) 100%
+  );
+}
+
+.hero-content {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Card Hover Effect */
+.category-card {
+  @apply transition-transform duration-300;
+}
+
+.category-card:hover {
+  transform: translateY(-5px) rotate(1deg);
+}
+
+.category-card::after {
+  @apply absolute inset-0 rounded-xl;
+  content: '';
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover::after {
+  opacity: 1;
+}
+
+/* Testimonial Quote Styling */
+.testimonial-card::before {
+  content: '“';
+  @apply absolute -top-4 left-2 text-6xl text-header opacity-20;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Navigation Bar Shadow */
+.navbar {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Menu Animation */
+.mobile-menu {
+  @apply max-h-0 overflow-hidden transition-all duration-300;
+}
+
+.mobile-menu.open {
+  @apply max-h-96;
+}
+
+Custom Button Styles
+.ethio-btn {
+  @apply px-8 py-3 rounded-full font-semibold transition-all;
+}
+/* 
+.ethio-btn-primary {
+  @apply bg-cta-btn text-header hover:bg-cta-btn/90;
+}
+
+.ethio-btn-secondary {
+  @apply bg-primary text-text hover:bg-primary/90;
+}*/
+
+/* Form Elements */
+/*.ethio-input {
+  @apply w-full p-4 rounded-2xl border border-header/20 focus:outline-none focus:ring-2 focus:ring-cta-btn;
+}
+
+ Footer Links */
+.footer-link {
+  @apply hover:text-cta-btn transition-colors duration-200;
+} 
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
